@@ -23,7 +23,7 @@ TODO: Write history
 ## :+1: Credits
 
 - [Swaubhik_Chakraborty](https://www.swaubhik.engineer/)
-- [Debojeet Das](https://www.Debojeet.works)
+- [Debojeet Das](https://www.debojeet.works)
 
 ## :eyes: License
 
