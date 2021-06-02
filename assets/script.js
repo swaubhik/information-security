@@ -22,7 +22,7 @@ function getKey(){
 
 //To write text to output cell
 function setOutput(output){
-    document.getElementById("encryptCipherText").innerHTML = output;
+    document.getElementById("encryptCipherText").value = output;
 }
 
 
