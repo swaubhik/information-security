@@ -1,4 +1,28 @@
+//To get index of the encryption or decryption algotithm
+function getIndex(selection){
+    let index = document.getElementById(selection).selectedIndex;
+    return index;
+  }
 
+//To reset form elements
+function resetForm(form){
+    document.getElementById(form).reset();
+}
+
+//To get text from input cell
+function getInput(elementID){
+    let text = document.getElementById(elementID).value;
+    return text;
+}
+
+//To write text to output cell
+function setOutput(elementID, output){
+    document.getElementById(elementID).value = output;
+}
+
+
+
+//Ceaser Cipher Algorithm
 function ceaserCipherEncrypt(text, shift){
     //Cipher Text
     let cipherText = "";
