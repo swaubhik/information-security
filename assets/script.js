@@ -1,23 +1,28 @@
 //To get index of the encryption or decryption algotithm
-function getIndex(selection){
-    let index = document.getElementById(selection).selectedIndex;
+function getIndex(){
+    let index = document.getElementById("encyrptChoice").selectedIndex;
     return index;
-  }
+}
 
 //To reset form elements
-function resetForm(form){
-    document.getElementById(form).reset();
+function resetForm1(){
+    document.getElementById("form1").reset();
 }
 
 //To get text from input cell
-function getInput(elementID){
-    let text = document.getElementById(elementID).value;
+function getInput(){
+    let text = document.getElementById("encryptPlainText").value;
     return text;
 }
 
+function getKey(){
+    let key = document.getElementById("encryptKey").value;
+    return key;
+}
+
 //To write text to output cell
-function setOutput(elementID, output){
-    document.getElementById(elementID).value = output;
+function setOutput(output){
+    document.getElementById("encryptCipherText").innerHTML = output;
 }
 
 
@@ -28,15 +33,15 @@ function encrypt(){
     let dropDown = "encryptChoice";
     let keyForm = "encryptKey";
 
-    let text = getInput(inputForm);
-    let choice = getIndex(dropDown);
+    let text = getInput();
+    let choice = getIndex();
     
 
     if(choice == 0)
     {
-        let key = getInput(keyForm);
+        let key = parseInt(getKey());
         let cipherText = caeserCipherEncrypt(text, key);
-        setOutput(outputForm, cipherText);
+        setOutput(cipherText);
     }
 }
 
