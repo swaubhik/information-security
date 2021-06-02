@@ -23,10 +23,10 @@ function setOutput(elementID, output){
 
 //ENCRYPT FUNCTION
 function encrypt(){
-    let inputForm = "";
-    let outputForm = "";
-    let dropDown = "";
-    let keyForm = "";
+    let inputForm = "encyptPlainText";
+    let outputForm = "encryptCypherText";
+    let dropDown = "encryptChoice";
+    let keyForm = "encryptKey";
 
     let text = getInput(inputForm);
     let choice = getIndex(dropDown);

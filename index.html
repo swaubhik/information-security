@@ -9,6 +9,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"
     />
+    <script src="assets/script.js"></script>
   </head>
 
   <body>
@@ -26,7 +27,7 @@
       <div class="container mt-5 pt-5 ">
         <div class="columns">
           <div class="column">
-            <form class="box">
+            <form class="box" id="form1">
               <h2 class="has-text-weight-bold is-size-3 has-text-centered">
                 Encrypt
               </h2>
@@ -35,6 +36,7 @@
                 <div class="control">
                   <textarea
                     class="textarea"
+                    id = "encryptPlainText"
                     placeholder="Enter Plain Text"
                   ></textarea>
                 </div>
@@ -43,23 +45,25 @@
                 <input
                   class="input is-rounded"
                   type="text"
+                  id = "encryptKey"
                   placeholder="Key in Bits"
                 />
               </div>
 
               <div class="select is-rounded">
-                <select>
+                <select id="encyrptChoice">
                   <option>Caesar Cipher</option>
                   <option>Monoalphabetic Cipher</option>
                 </select>
               </div>
-              <button class="button is-primary">Encrypt</button>
+              <button class="button is-primary" onclick="encrypt()">Encrypt</button>
 
               <div class="field">
                 <label class="label">Cipher Text</label>
                 <div class="control">
                   <textarea
                     class="textarea"
+                    id="encryptCipherText"
                     placeholder="Output Cipher Text"
                   ></textarea>
                   <button class="button is-danger mt-2">Reset</button>
@@ -122,6 +126,5 @@
         </p>
       </div>
     </footer>
-    <script src="./assets/script.js"></script>
   </body>
 </html>
