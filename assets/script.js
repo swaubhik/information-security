@@ -31,6 +31,7 @@ function encrypt(){
     let text = getInput(inputForm);
     let choice = getIndex(dropDown);
     
+
     if(choice == 0)
     {
         let key = getInput(keyForm);
