@@ -23,65 +23,69 @@
           Encryption and Decryption Online Tool
         </p>
       </div>
-      <div class="columns">
-        <div class="column">
-          <form class="box">
-            <div class="field">
-              <label class="label">Text message</label>
-              <div class="control">
-                <textarea
-                  class="textarea"
-                  placeholder="Your message"
-                ></textarea>
+      <div class="container mt-5 pt-5">
+        <div class="columns">
+          <div class="column">
+            <form class="box">
+              <div class="field">
+                <label class="label">Plain Text</label>
+                <div class="control">
+                  <textarea
+                    class="textarea"
+                    placeholder="Your message"
+                  ></textarea>
+                </div>
               </div>
-            </div>
-            <div class="select is-rounded">
-              <select>
-                <option>Ceasar Cipher</option>
-                <option>Monoalphabetic Cipher</option>
-              </select>
-            </div>
-            <button class="button is-primary">Encrypt</button>
-            <div class="field">
-              <label class="label">Output</label>
-              <div class="control">
-                <textarea
-                  class="textarea"
-                  placeholder="Output message"
-                ></textarea>
+              <div class="select is-rounded">
+                <select>
+                  <option>Ceasar Cipher</option>
+                  <option>Monoalphabetic Cipher</option>
+                </select>
               </div>
-            </div>
-          </form>
-        </div>
+              <button class="button is-primary">Encrypt</button>
+              <button class="button is-danger">Reset</button>
+              <div class="field">
+                <label class="label">Cipher Text</label>
+                <div class="control">
+                  <textarea
+                    class="textarea"
+                    placeholder="Output message"
+                  ></textarea>
+                </div>
+              </div>
+            </form>
+          </div>
 
-        <div class="column">
-          <form class="box">
-            <div class="field">
-              <label class="label">Text message</label>
-              <div class="control">
-                <textarea
-                  class="textarea"
-                  placeholder="Your message"
-                ></textarea>
+          <div class="column">
+            <form class="box">
+              <div class="field">
+                <label class="label">Cipher Text</label>
+                <div class="control">
+                  <textarea
+                    class="textarea"
+                    placeholder="Your message"
+                  ></textarea>
+                </div>
               </div>
-            </div>
-            <div class="select is-rounded">
-              <select>
-                <option>Ceasar Cipher</option>
-                <option>Monoalphabetic Cipher</option>
-              </select>
-            </div>
-            <button class="button is-danger">Decrypt</button>
-            <div class="field">
-              <label class="label">Output</label>
-              <div class="control">
-                <textarea
-                  class="textarea"
-                  placeholder="Output message"
-                ></textarea>
+              <div class="select is-rounded">
+                <select>
+                  <option>Ceasar Cipher</option>
+                  <option>Monoalphabetic Cipher</option>
+                </select>
               </div>
-            </div>
-          </form>
+              <button class="button is-info">Decrypt</button>
+              <button class="button is-danger">Reset</button>
+              <div class="field">
+                <label class="label">Plain Text</label>
+                <div class="control">
+                  <textarea
+                    class="textarea"
+                    placeholder="Output message"
+                  ></textarea>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
