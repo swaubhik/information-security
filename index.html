@@ -27,15 +27,26 @@
         <div class="columns">
           <div class="column">
             <form class="box">
+              <h2 class="has-text-weight-bold is-size-3 has-text-centered">
+                Encrypt
+              </h2>
               <div class="field">
                 <label class="label">Plain Text</label>
                 <div class="control">
                   <textarea
                     class="textarea"
-                    placeholder="Your message"
+                    placeholder="Enter Plain Text"
                   ></textarea>
                 </div>
               </div>
+              <div class="container mb-3 mt-1">
+                <input
+                  class="input is-rounded"
+                  type="text"
+                  placeholder="Key in Bits"
+                />
+              </div>
+
               <div class="select is-rounded">
                 <select>
                   <option>Ceasar Cipher</option>
@@ -49,7 +60,7 @@
                 <div class="control">
                   <textarea
                     class="textarea"
-                    placeholder="Output message"
+                    placeholder="Output Cipher Text"
                   ></textarea>
                 </div>
               </div>
@@ -58,14 +69,24 @@
 
           <div class="column">
             <form class="box">
+              <h2 class="has-text-weight-bold is-size-3 has-text-centered">
+                Decrypt
+              </h2>
               <div class="field">
                 <label class="label">Cipher Text</label>
                 <div class="control">
                   <textarea
                     class="textarea"
-                    placeholder="Your message"
+                    placeholder="Enter Cipher Text"
                   ></textarea>
                 </div>
+              </div>
+              <div class="container mb-3 mt-1">
+                <input
+                  class="input is-rounded"
+                  type="text"
+                  placeholder="Key in Bits"
+                />
               </div>
               <div class="select is-rounded">
                 <select>
@@ -80,7 +101,7 @@
                 <div class="control">
                   <textarea
                     class="textarea"
-                    placeholder="Output message"
+                    placeholder="Output Plain Text"
                   ></textarea>
                 </div>
               </div>
@@ -89,5 +110,16 @@
         </div>
       </div>
     </div>
+    <footer>
+      <div class="content has-text-centered mb-5 pb-5">
+        <p>
+          <strong>Encrytor</strong> by
+          <a href="https://swaubhik.engineer">Swaubhik Chakraborty</a>,
+          <a href="https://debojeet.works">Debojeet Das</a>. The source code is
+          licensed
+          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
