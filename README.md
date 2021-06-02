@@ -1,8 +1,4 @@
 # Information-security
-Information security algorithm programs
-
-[Index Link](https://swaubhik.engineer/information-security/)
-# Information-security
 
 In this project we are developing all the algorithms present in Information security using HTML, CSS, and JavaScript
 
