@@ -21,6 +21,41 @@ function setOutput(elementID, output){
 }
 
 
+//ENCRYPT FUNCTION
+function encrypt(){
+    let inputForm = "";
+    let outputForm = "";
+    let dropDown = "";
+    let keyForm = "";
+
+    let text = getInput(inputForm);
+    let choice = getIndex(dropDown);
+    
+    if(choice == 0)
+    {
+        let key = getInput(keyForm);
+        let cipherText = ceaserCipherEncrypt(text, key);
+        setOutput(outputForm, cipherText);
+    }
+}
+
+//DECRYPT FUNCTION
+function decrypt(){
+    let inputForm = "";
+    let outputForm = "";
+    let dropDown = "";
+    let keyForm = "";
+
+    let text = getInput(inputForm);
+    let choice = getIndex(dropDown);
+    
+    if(choice == 0)
+    {
+        let key = getInput(keyForm);
+        let cipherText = ceaserCipherDecrypt(text, key);
+        setOutput(outputForm, cipherText);
+    }
+}
 
 //Ceaser Cipher Algorithm
 function ceaserCipherEncrypt(text, shift){
