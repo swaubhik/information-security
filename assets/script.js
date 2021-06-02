@@ -34,7 +34,7 @@ function encrypt(){
     if(choice == 0)
     {
         let key = getInput(keyForm);
-        let cipherText = ceaserCipherEncrypt(text, key);
+        let cipherText = caeserCipherEncrypt(text, key);
         setOutput(outputForm, cipherText);
     }
 }
@@ -52,13 +52,13 @@ function decrypt(){
     if(choice == 0)
     {
         let key = getInput(keyForm);
-        let cipherText = ceaserCipherDecrypt(text, key);
+        let cipherText = caeserCipherDecrypt(text, key);
         setOutput(outputForm, cipherText);
     }
 }
 
 //Ceaser Cipher Algorithm
-function ceaserCipherEncrypt(text, shift){
+function caeserCipherEncrypt(text, shift){
     //Cipher Text
     let cipherText = "";
     for(let i = 0; i < text.length; i++)
@@ -88,7 +88,7 @@ function ceaserCipherEncrypt(text, shift){
 }
 
 
-function ceaserCipherDecrypt(text, shift){
+function caeserCipherDecrypt(text, shift){
     //Plain Text
     let plainText = "";
     for(let i = 0; i < text.length; i++)
@@ -116,11 +116,4 @@ function ceaserCipherDecrypt(text, shift){
     }
     return plainText;
 }
-
-let text = "EXXEGO EXSRGI";
-let shift = 4;
-let result = ceaserCipherDecrypt(text, shift);
-console.log("Text  : " + text);
-console.log("Shift : " + shift);
-console.log("Cipher: " + result);
     
