@@ -8,6 +8,9 @@ function getIndex(){
 function resetForm1(){
     document.getElementById("form1").reset();
 }
+function resetForm2(){
+    document.getElementById("form2").reset();
+}
 
 //To get text from input cell
 function getInput(){
