@@ -14,49 +14,67 @@
 
   <body>
     <div class="section has-background-dark">
-      <div class="container ">
+      <div class="container">
         <h1
-          class="title is-flex is-justify-content-center has-text-weight-bold has-text-white"
+          class="
+            title
+            is-flex is-justify-content-center
+            has-text-weight-bold has-text-white
+          "
         >
           Information Security
         </h1>
-        <p class="subtitle is-flex is-justify-content-center has-text-grey-light">
+        <p
+          class="subtitle is-flex is-justify-content-center has-text-grey-light"
+        >
           Encryption and Decryption Online Tool
         </p>
       </div>
-      <div class="container mt-5 pt-5 ">
+      <div class="container mt-3 pt-3">
         <div class="columns">
           <div class="column">
             <form class="box" id="form1">
               <h2 class="has-text-weight-bold is-size-3 has-text-centered">
-                Encrypt
+                Encrypt 🔒
               </h2>
               <div class="field">
                 <label class="label">Plain Text</label>
                 <div class="control">
                   <textarea
                     class="textarea"
-                    id = "encryptPlainText"
+                    id="encryptPlainText"
                     placeholder="Enter Plain Text"
                   ></textarea>
                 </div>
               </div>
-              <div class="container mb-3 mt-1">
+              <div class="field">
                 <input
                   class="input is-rounded"
                   type="text"
-                  id = "encryptKey"
+                  id="encryptKey"
                   placeholder="Key in Bits"
                 />
               </div>
+              <div class="columns">
+                <div class="column">
+                  <div class="select is-rounded">
+                    <select id="encyrptChoice">
+                      <option>Caesar Cipher</option>
+                      <option>Monoalphabetic Cipher</option>
+                    </select>
+                  </div>
+                </div>
 
-              <div class="select is-rounded">
-                <select id="encyrptChoice">
-                  <option>Caesar Cipher</option>
-                  <option>Monoalphabetic Cipher</option>
-                </select>
+                <div class="column">
+                  <button
+                    type="button"
+                    class="button is-primary"
+                    onclick="encrypt()"
+                  >
+                    Encrypt 
+                  </button>
+                </div>
               </div>
-              <button type="button" class="button is-primary" onclick="encrypt()">Encrypt</button>
 
               <div class="field">
                 <label class="label">Cipher Text</label>
@@ -66,7 +84,13 @@
                     id="encryptCipherText"
                     placeholder="Output Cipher Text"
                   ></textarea>
-                  <button type="button" class="button is-danger mt-2" onclick="resetForm1()">Reset</button>
+                  <button
+                    type="button"
+                    class="button is-danger mt-2"
+                    onclick="resetForm1()"
+                  >
+                    Reset
+                  </button>
                 </div>
               </div>
             </form>
@@ -75,7 +99,7 @@
           <div class="column">
             <form class="box" id="form2">
               <h2 class="has-text-weight-bold is-size-3 has-text-centered">
-                Decrypt
+                Decrypt 🔓
               </h2>
               <div class="field">
                 <label class="label">Cipher Text</label>
@@ -93,13 +117,26 @@
                   placeholder="Key in Bits"
                 />
               </div>
-              <div class="select is-rounded">
-                <select>
-                  <option>Caesar Cipher</option>
-                  <option>Monoalphabetic Cipher</option>
-                </select>
+              <div class="columns">
+                <div class="column">
+                  <div class="select is-rounded">
+                    <select id="encyrptChoice">
+                      <option>Caesar Cipher</option>
+                      <option>Monoalphabetic Cipher</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="column">
+                  <button
+                    type="button"
+                    class="button is-info"
+                    onclick="decrypt()"
+                  >
+                    Decrypt 
+                  </button>
+                </div>
               </div>
-              <button class="button is-info">Decrypt</button>
               <div class="field">
                 <label class="label">Plain Text</label>
                 <div class="control">
@@ -107,7 +144,13 @@
                     class="textarea"
                     placeholder="Output Plain Text"
                   ></textarea>
-                  <button type="button" class="button is-danger mt-2" onclick="resetForm2()">Reset</button>
+                  <button
+                    type="button"
+                    class="button is-danger mt-2"
+                    onclick="resetForm2()"
+                  >
+                    Reset
+                  </button>
                 </div>
               </div>
             </form>
@@ -124,6 +167,14 @@
           licensed
           <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
         </p>
+        <a href="https://bulma.io">
+          <img
+            src="https://bulma.io/images/made-with-bulma.png"
+            alt="Made with Bulma"
+            width="256"
+            height="48"
+          />
+        </a>
       </div>
     </footer>
   </body>
