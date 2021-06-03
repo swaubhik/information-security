@@ -1,6 +1,10 @@
 //To get index of the encryption or decryption algotithm
-function getIndex(){
+function getEncryptIndex(){
     let index = document.getElementById("encyrptChoice").selectedIndex;
+    return index;
+}
+function getDecryptIndex(){
+    let index = document.getElementById("decryptChoice").selectedIndex;
     return index;
 }
 
@@ -13,56 +17,61 @@ function resetForm2(){
 }
 
 //To get text from input cell
-function getInput(){
+function getEncryptInput(){
     let text = document.getElementById("encryptPlainText").value;
     return text;
 }
+function getDecryptInput(){
+    let text = document.getElementById("decryptCipherText").value;
+    return text;
+}
 
-function getKey(){
+
+//To get key value
+function getEncryptKey(){
     let key = document.getElementById("encryptKey").value;
     return key;
 }
+function getDecryptKey(){
+    let key = document.getElementById("decryptKey").value;
+    return key;
+}
+
 
 //To write text to output cell
-function setOutput(output){
+function setEncryptOutput(output){
     document.getElementById("encryptCipherText").value = output;
+}
+function setDecryptOutput(output){
+    document.getElementById("decryptPlainText").value = output;
 }
 
 
 //ENCRYPT FUNCTION
 function encrypt(){
-    let inputForm = "encyptPlainText";
-    let outputForm = "encryptCypherText";
-    let dropDown = "encryptChoice";
-    let keyForm = "encryptKey";
-
-    let text = getInput();
-    let choice = getIndex();
+    let text = getEncryptInput();
+    let choice = getEncryptIndex();
     
 
     if(choice == 0)
     {
-        let key = parseInt(getKey());
+        let key = parseInt(getEncryptKey());
         let cipherText = caeserCipherEncrypt(text, key);
-        setOutput(cipherText);
+        setEncryptOutput(cipherText);
     }
 }
 
 //DECRYPT FUNCTION
 function decrypt(){
-    let inputForm = "";
-    let outputForm = "";
-    let dropDown = "";
-    let keyForm = "";
-
-    let text = getInput(inputForm);
-    let choice = getIndex(dropDown);
+    let text = getDecryptInput();
+    let choice = getDecryptIndex();
     
+
     if(choice == 0)
     {
-        let key = getInput(keyForm);
-        let cipherText = caeserCipherDecrypt(text, key);
-        setOutput(outputForm, cipherText);
+        let key = parseInt(getDecryptKey());
+        let plainText = caeserCipherDecrypt(text, key);
+        setDecryptOutput(plainText);
     }
 }
 

@@ -111,6 +111,7 @@
                 <div class="control">
                   <textarea
                     class="textarea"
+                    id="decryptCipherText"
                     placeholder="Enter Cipher Text"
                   ></textarea>
                 </div>
@@ -119,13 +120,14 @@
                 <input
                   class="input is-rounded"
                   type="text"
+                  id="decryptKey"
                   placeholder="Key in Bits"
                 />
               </div>
               <div class="columns">
                 <div class="column">
                   <div class="select is-rounded">
-                    <select id="encyrptChoice">
+                    <select id="decryptChoice">
                       <option>Caesar Cipher</option>
                       <option>Monoalphabetic Cipher</option>
                     </select>
@@ -147,6 +149,7 @@
                 <div class="control">
                   <textarea
                     class="textarea"
+                    id="decryptPlainText"
                     placeholder="Output Plain Text"
                   ></textarea>
                   <button
