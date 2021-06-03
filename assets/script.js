@@ -117,6 +117,7 @@ function caeserCipherEncrypt(text, shift){
 function caeserCipherDecrypt(text, shift){
     //Plain Text
     let plainText = "";
+    shift = 26 - shift
     for(let i = 0; i < text.length; i++)
     {
         let character = text[i];
@@ -126,12 +127,12 @@ function caeserCipherDecrypt(text, shift){
         }
         else if(character == character.toUpperCase())
         {
-            let char = String.fromCharCode(((character.charCodeAt(0) - shift - 65) % 26) + 65);
+            let char = String.fromCharCode(((character.charCodeAt(0) + shift - 65) % 26) + 65);
             plainText += char;
         }
         else if(character != character.toUpperCase())
         {
-            let char = String.fromCharCode(((character.charCodeAt(0) - shift - 97) % 26) + 97);
+            let char = String.fromCharCode(((character.charCodeAt(0) + shift - 97) % 26) + 97);
             plainText += char;
         }
         else
