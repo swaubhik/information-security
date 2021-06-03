@@ -56,6 +56,10 @@ function encrypt(){
     if(choice == 0)
     {
         let key = parseInt(getEncryptKey());
+        if (isNaN(key) || key < 1 || key > 25) {
+            alert("The Key Value should be 1 - 25");
+            return false;
+        }
         let cipherText = caeserCipherEncrypt(text, key);
         setEncryptOutput(cipherText);
     }
@@ -70,6 +74,10 @@ function decrypt(){
     if(choice == 0)
     {
         let key = parseInt(getDecryptKey());
+        if (isNaN(key) || key < 1 || key > 25) {
+            alert("The Key Value should be 1 - 25");
+            return false;
+        }
         let plainText = caeserCipherDecrypt(text, key);
         setDecryptOutput(plainText);
     }

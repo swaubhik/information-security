@@ -9,6 +9,12 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"
     />
+    <link 
+      rel="stylesheet" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" 
+      integrity="undefined" 
+      crossorigin="anonymous"
+    />
     <script src="assets/script.js"></script>
   </head>
 
@@ -40,7 +46,7 @@
           <div class="column">
             <form class="box" id="form1">
               <h2 class="has-text-weight-bold is-size-3 has-text-centered">
-                Encrypt 🔒
+                Encrypt <i class="fa fa-lock" aria-hidden="true"></i>
               </h2>
               <div class="field">
                 <label class="label">Plain Text</label>
@@ -57,7 +63,7 @@
                   class="input is-rounded"
                   type="text"
                   id="encryptKey"
-                  placeholder="Key in Bits"
+                  placeholder="Key"
                 />
               </div>
               <div class="columns">
@@ -104,7 +110,7 @@
           <div class="column">
             <form class="box" id="form2">
               <h2 class="has-text-weight-bold is-size-3 has-text-centered">
-                Decrypt 🔓
+                Decrypt <i class="fa fa-unlock" aria-hidden="true"></i>
               </h2>
               <div class="field">
                 <label class="label">Cipher Text</label>
@@ -121,7 +127,7 @@
                   class="input is-rounded"
                   type="text"
                   id="decryptKey"
-                  placeholder="Key in Bits"
+                  placeholder="Key"
                 />
               </div>
               <div class="columns">
@@ -166,7 +172,7 @@
         </div>
       </div>
     </div>
-    <footer class="has-background-black footer">
+    <footer class="has-background-black footer py-4">
       <div class="content has-text-centered has-text-white">
         <p>
           <strong class="has-text-white">Encryptor</strong> by
@@ -175,14 +181,6 @@
           licensed
           <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
         </p>
-        <a href="https://bulma.io">
-          <img
-            src="https://bulma.io/images/made-with-bulma.png"
-            alt="Made with Bulma"
-            width="256"
-            height="48"
-          />
-        </a>
       </div>
     </footer>
   </body>
