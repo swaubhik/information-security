@@ -1,3 +1,4 @@
+//Returns A % B (Supports negative number as well)
 function modulo(a, b){
     if (b < 1)
     {
