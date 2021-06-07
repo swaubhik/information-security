@@ -1,8 +1,10 @@
-function modulo(first, second){
-    return (first % second);
+function modulo(a, b){
+    if (b < 1)
+    {
+        console.log("The second value should be greater than 0");
+    }
+    let mod = 0;
+    let c = Math.floor(a / b);
+    mod = a - (b * c);
+    return mod;
 }
-
-let a = 7;
-let b = 26;
-let a = modulo(7,26);
-console.log()
