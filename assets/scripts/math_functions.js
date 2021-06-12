@@ -120,3 +120,39 @@ function determinantOfMatrix(mat, n) {
 // getCofactor(mat, temp, 0, 0, n);
 // console.log(determinantOfMatrix(temp, n - 1));
 
+
+
+// This function stores transpose of A in B
+function transpose(mat1, mat2, n) {
+  var i, j;
+  for (i = 0; i < n; i++)
+    for (j = 0; j < n; j++)
+      mat2[i][j] = mat1[j][i];
+}
+
+function scalarMatrixMultiplication(mat, value, n) {
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n; j++) {
+      mat[i][j] = mat[i][j] * value;
+    }
+  }
+}
+
+// Driver code
+
+var mat1 = [
+  [6, 24, 1],
+  [13, 16, 10],
+  [20, 17, 15]
+];
+
+let n = 3
+let mat2 = new Array(n);
+for (let i = 0; i < n; i++) {
+  mat2[i] = new Array(n);
+}
+
+transpose(mat1, mat2, 3);
+console.table(mat2);
+
+
