@@ -14,7 +14,8 @@ function hillCipherEncrypt(key, text) {
         }
         let returnText = multiplyMatrices(k, plainText, n, n, n, 1);
         matrixModulus(returnText, 26, n, 1);
-
+        let partialText = genrateText(returnText, n);
+        cipherText += partialText;
     }
 
     return cipherText;
@@ -80,4 +81,14 @@ function genrateTextMatrix(text, n, counter) {
         counter++;
     }
     return plainText;
+}
+
+//* Returns Text from Text Matrix
+function genrateText(textMatrix, n) {
+    let partialText = "";
+    for (let i = 0; i < n; i++) {
+        let char = String.fromCharCode(textMatrix[i][0] + 65);
+        partialText += char;
+    }
+    return partialText;
 }
