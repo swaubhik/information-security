@@ -3,27 +3,26 @@ function hillCipherEncrypt(key, text) {
     let cipherText = "";
     let n = 3;
     let k = genrateKeyMatrix(key, n);
+    let det = determinantOfMatrix(k, n);
+    if (det == 0) {
+        console.log("determininat of matrix doesnot exist");
+        return false;
+    }
     let counter = 0;
     while (counter < text.length) {
         plainText = genrateTextMatrix(text, n, counter);
         counter += 3;
-        let det = determinantOfMatrix(k, n);
-        if (det == 0) {
-            console.log("determininat of matrix doesnot exist");
-            return false;
-        }
         let returnText = multiplyMatrices(k, plainText, n, n, n, 1);
         matrixModulus(returnText, 26, n, 1);
         let partialText = genrateText(returnText, n);
         cipherText += partialText;
     }
-
     return cipherText;
-
 }
 
 //* Decrypts ciphertext with key using Hill Cipher 
-function hillCipherDecrypt(key, cipherText) {
+function hillCipherDecrypt(key, text) {
+    let plainText = "";
     let n = 3;
     let k = genrateKeyMatrix(key, n);
     let detDecrypt = determinantOfMatrix(k, n);
@@ -37,8 +36,15 @@ function hillCipherDecrypt(key, cipherText) {
     matrixModulus(inverseKey, 26, n, n);
     scalarMatrixMultiplication(inverseKey, detInverse, n);
     matrixModulus(inverseKey, 26, n, n);
-    let plainText = multiplyMatrices(inverseKey, cipherText, n, n, n, 1);
-    matrixModulus(plainText, 26, n, 1);
+    let counter = 0;
+    while (counter < text.length) {
+        cipherText = genrateTextMatrix(text, n, counter);
+        counter += 3;
+        let returnText = multiplyMatrices(inverseKey, cipherText, n, n, n, 1);
+        matrixModulus(returnText, 26, n, 1);
+        let partialText = genrateText(returnText, n);
+        plainText += partialText;
+    }
     return plainText;
 }
 
@@ -72,7 +78,11 @@ function genrateTextMatrix(text, n, counter) {
     }
     for (let i = 0; i < n; i++) {
         let character = text[counter];
-        if (character == character.toUpperCase()) {
+        if (counter >= text.length)
+        {
+            plainText[i][0] = 0;
+        }
+        else if (character == character.toUpperCase()) {
             plainText[i][0] = character.charCodeAt(0) - 65;
         }
         else if (character != character.toUpperCase()) {
@@ -92,3 +102,15 @@ function genrateText(textMatrix, n) {
     }
     return partialText;
 }
+
+
+// let txt = "swaubhik";
+// let txt2 = "MIETFJMUU";
+// let key = "debojeeet"; 
+// // console.log(hillCipherEncrypt(key, txt));
+// console.log(hillCipherDecrypt(key, txt2));
+
+// let ans = "SWAUBHIKA";
+
+
+

@@ -60,12 +60,17 @@ function encrypt() {
   }
   if (choice == 2) {
     let key = getEncryptKey();
-    // if (isNaN(key) || key < 1 || key > 25) {
-    //   alert("The Key Value should be 1 - 25");
-    //   return false;
-    // }
+    if (typeof key != "string" || key.length != 9)
+    {
+      alert("The Key should be string of length 9!!!");
+      return false;
+    }
     let cipherText = hillCipherEncrypt(key, text);
     setEncryptOutput(cipherText);
+    if(text.length % 3 != 0) {
+      alert("Please ignore after " + text.length.toString() + "  character!!");
+      return false;
+    }
   }
 }
 
@@ -85,10 +90,11 @@ function decrypt() {
   }
   else if (choice == 2) {
     let key = getDecryptKey();
-    // if (isNaN(key) || key < 1 || key > 25) {
-    //   alert("The Key Value should be 1 - 25");
-    //   return false;
-    // }
+    if (typeof key != "string" || key.length != 9)
+    {
+      alert("The Key should be string of length 9!!!");
+      return false;
+    }
     let plainText = hillCipherDecrypt(key, text);
     setDecryptOutput(plainText);
   }
