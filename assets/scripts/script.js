@@ -58,6 +58,15 @@ function encrypt() {
     let cipherText = caeserCipherEncrypt(text, key);
     setEncryptOutput(cipherText);
   }
+  if (choice == 2) {
+    let key = getEncryptKey();
+    // if (isNaN(key) || key < 1 || key > 25) {
+    //   alert("The Key Value should be 1 - 25");
+    //   return false;
+    // }
+    let cipherText = hillCipherEncrypt(key, text);
+    setEncryptOutput(cipherText);
+  }
 }
 
 //DECRYPT FUNCTION
@@ -72,6 +81,15 @@ function decrypt() {
       return false;
     }
     let plainText = caeserCipherDecrypt(text, key);
+    setDecryptOutput(plainText);
+  }
+  else if (choice == 2) {
+    let key = getDecryptKey();
+    // if (isNaN(key) || key < 1 || key > 25) {
+    //   alert("The Key Value should be 1 - 25");
+    //   return false;
+    // }
+    let plainText = hillCipherDecrypt(key, text);
     setDecryptOutput(plainText);
   }
 }

@@ -159,21 +159,4 @@ function matrixModulus(mat, mod, m, n) {
     }
 }
 
-// // Driver code
-
-// var mat1 = [
-//   [6, 24, 1],
-//   [13, 16, 10],
-//   [20, 17, 15]
-// ];
-
-// let n = 3
-// let mat2 = new Array(n);
-// for (let i = 0; i < n; i++) {
-//   mat2[i] = new Array(n);
-// }
-
-// transpose(mat1, mat2, 3);
-// console.table(mat2);
-
 

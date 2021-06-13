@@ -1,14 +1,22 @@
 //* Encrypts plaintext with key using Hill Cipher
-function hillCipherEncrypt(key, plainText) {
+function hillCipherEncrypt(key, text) {
+    let cipherText = "";
     let n = 3;
     let k = genrateKeyMatrix(key, n);
-    let det = determinantOfMatrix(k, n);
-    if (det == 0) {
-        console.log("determininat of matrix doesnot exist");
-        return false;
+    let counter = 0;
+    while (counter < text.length) {
+        plainText = genrateTextMatrix(text, n, counter);
+        counter += 3;
+        let det = determinantOfMatrix(k, n);
+        if (det == 0) {
+            console.log("determininat of matrix doesnot exist");
+            return false;
+        }
+        let returnText = multiplyMatrices(k, plainText, n, n, n, 1);
+        matrixModulus(returnText, 26, n, 1);
+
     }
-    let cipherText = multiplyMatrices(k, plainText, n, n, n, 1);
-    matrixModulus(cipherText, 26, n, 1);
+
     return cipherText;
 
 }
@@ -53,4 +61,23 @@ function genrateKeyMatrix(k, n) {
         }
     }
     return key;
+}
+
+//* Returns Text Matrix for Hill Cipher
+function genrateTextMatrix(text, n, counter) {
+    let plainText = new Array(n);
+    for (let i = 0; i < n; i++) {
+        plainText[i] = new Array(1);
+    }
+    for (let i = 0; i < n; i++) {
+        let character = text[counter];
+        if (character == character.toUpperCase()) {
+            plainText[i][0] = character.charCodeAt(0) - 65;
+        }
+        else if (character != character.toUpperCase()) {
+            plainText[i][0] = character.charCodeAt(0) - 97;
+        }
+        counter++;
+    }
+    return plainText;
 }
