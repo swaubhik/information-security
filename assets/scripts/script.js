@@ -58,6 +58,20 @@ function encrypt() {
     let cipherText = caeserCipherEncrypt(text, key);
     setEncryptOutput(cipherText);
   }
+  if (choice == 2) {
+    let key = getEncryptKey();
+    if (typeof key != "string" || key.length != 9)
+    {
+      alert("The Key should be string of length 9!!!");
+      return false;
+    }
+    let cipherText = hillCipherEncrypt(key, text);
+    setEncryptOutput(cipherText);
+    if(text.length % 3 != 0) {
+      alert("Please ignore after " + text.length.toString() + "  character!!");
+      return false;
+    }
+  }
 }
 
 //DECRYPT FUNCTION
@@ -72,6 +86,16 @@ function decrypt() {
       return false;
     }
     let plainText = caeserCipherDecrypt(text, key);
+    setDecryptOutput(plainText);
+  }
+  else if (choice == 2) {
+    let key = getDecryptKey();
+    if (typeof key != "string" || key.length != 9)
+    {
+      alert("The Key should be string of length 9!!!");
+      return false;
+    }
+    let plainText = hillCipherDecrypt(key, text);
     setDecryptOutput(plainText);
   }
 }
