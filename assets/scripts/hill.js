@@ -78,8 +78,7 @@ function genrateTextMatrix(text, n, counter) {
     }
     for (let i = 0; i < n; i++) {
         let character = text[counter];
-        if (counter >= text.length)
-        {
+        if (counter >= text.length) {
             plainText[i][0] = 0;
         }
         else if (character == character.toUpperCase()) {
@@ -102,15 +101,6 @@ function genrateText(textMatrix, n) {
     }
     return partialText;
 }
-
-
-// let txt = "swaubhik";
-// let txt2 = "MIETFJMUU";
-// let key = "debojeeet"; 
-// // console.log(hillCipherEncrypt(key, txt));
-// console.log(hillCipherDecrypt(key, txt2));
-
-// let ans = "SWAUBHIKA";
 
 
 
