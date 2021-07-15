@@ -1,3 +1,14 @@
+//* Returns GCD of two Numbers
+function gcd(a, b) {
+    if (b == 0) {
+        return a;
+    }
+    else {
+        return gcd(b, (a % b));
+    }
+}
+
+
 //* Returns A % B (Supports negative number as well)
 function modulo(a, b) {
     if (b < 1) {
