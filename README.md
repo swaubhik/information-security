@@ -6,7 +6,7 @@ In this project we are developing all the algorithms present in Information secu
 
 ## Usage
 
-[GO TO](https://swaubhik.engineer/information-security/)
+[GO TO](https://swaubhik.github.io/information-security/)
 
 ## Contributing
 
