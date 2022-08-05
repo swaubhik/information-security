@@ -1,3 +1,5 @@
+[![Deploy static content to Pages](https://github.com/swaubhik/information-security/actions/workflows/pages.yml/badge.svg?branch=main)](https://github.com/swaubhik/information-security/actions/workflows/pages.yml)
+
 # Information-security
 
 In this project we are developing all the algorithms present in Information security using HTML, CSS, and JavaScript
